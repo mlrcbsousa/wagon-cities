@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 
 class ActiveCity extends Component {
   render() {
-    if (this.props.activeCity) {
-      const { address, name, slug } = this.props.activeCity
+    const { activeCity } = this.props;
+    if (activeCity) {
+      const { address, name, slug } = activeCity;
       const src = `https://kitt.lewagon.com/placeholder/cities/${slug}`;
 
       return (

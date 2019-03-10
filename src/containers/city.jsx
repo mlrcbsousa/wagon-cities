@@ -6,7 +6,7 @@ import { setActiveCity } from '../actions';
 
 class City extends Component {
   render() {
-    const { city } = this.props;
+    const { city, setActiveCity } = this.props;
     return (
       <div
         className="list-group-item"
@@ -25,10 +25,4 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-function mapStateToProps(state) {
-  return {
-    activeCity: state.activeCity
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(City);
+export default connect(null, mapDispatchToProps)(City);
